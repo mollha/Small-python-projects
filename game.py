@@ -1,4 +1,4 @@
-import random
+from random import choice
 
 cards = ['A', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
@@ -17,7 +17,7 @@ def check_val(ans, card_1, card_2):
 
 def play(points, old_card=None):
     if not old_card:
-        old_card = random.choice(cards)
+        old_card = choice(cards)
     print('Card selected is ' + old_card)
 
     while True:
@@ -28,7 +28,7 @@ def play(points, old_card=None):
             break
 
     while True:
-        new_card = random.choice(cards)
+        new_card = choice(cards)
         if new_card != old_card:
             break
 
