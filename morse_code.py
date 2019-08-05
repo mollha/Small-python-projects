@@ -1,3 +1,5 @@
+# Converts a string of morse code to a string of english and vice versa
+
 from re import fullmatch
 
 morse_dict = {
