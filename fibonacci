@@ -10,3 +10,13 @@ def print_first(n: int):
     for index in range(0, n-1):
         fib_table.append(fib_table[index] + fib_table[index + 1])
     return fib_table
+
+
+def print_first_less_memory(n: int):
+    first = 0
+    second = 1
+    for index in range(0, n-1):
+        temp = first + second
+        first = second
+        second = temp
+    return second
