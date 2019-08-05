@@ -13,10 +13,16 @@ def print_first(n: int):
 
 
 def print_first_less_memory(n: int):
-    first = 0
-    second = 1
-    for index in range(0, n-1):
-        temp = first + second
-        first = second
-        second = temp
-    return second
+    if n <= 0:
+        raise Exception('Input a positive integer')
+    else:
+        first = 0
+        second = 1
+        total_string = ''
+        for index in range(0, n-1):
+            total_string += str(first) + ', '
+            temp = first + second
+            first = second
+            second = temp
+        total_string += str(first)
+        return total_string
