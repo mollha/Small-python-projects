@@ -1,0 +1,12 @@
+def index_fibonacci(n: int):
+    if n <= 1:
+        return n
+    else:
+        return index_fibonacci(n-1) + index_fibonacci(n-2)
+
+
+def print_first(n: int):
+    fib_table = [0, 1]
+    for index in range(0, n-1):
+        fib_table.append(fib_table[index] + fib_table[index + 1])
+    return fib_table
