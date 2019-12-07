@@ -25,3 +25,6 @@ def get_max_profit(stock_prices: list) -> int:
 
 
 print(get_max_profit([10, 5, 7, 8, 11, 9]))
+
+# Example where the stock price decreases ALL day (negative best profit)
+print(get_max_profit([10, 9, 8, 7, 6, 5]))
